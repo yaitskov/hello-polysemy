@@ -11,6 +11,10 @@ myTestTree :: IO TestTree
 myTestTree =
   pure
   $ testGroup "myMainGroup"
-      [ testCase "failing test case"
-        $ assertEqual "True /= False" True False
+      [
+        testCase "passing test case"
+        $ assertEqual "True == True" True True
+
+        -- , testCase "failing test case"
+        -- $ assertEqual "True == False" True False
       ]
